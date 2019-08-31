@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #FF5733;
+  color: #ffffff;
+  padding: 15px;
+  text-align:center;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.menu a{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #33b5e5;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AP Tutorials</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+       <li><a href="index.html">Home</a></li>
+      <li><a href="html_page.html">HTML</a></li>
+      <li><a href="css_page.html">CSS</a></li>
+      <li><a href="javascript_page.html">JavaScript</a></li>
+      <li><a href="jquery_page.html">JQuery</a></li>
+      <li><a href="bootstrap_page.html">Bootstrap</a></li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>Difference Between HTML5 and Its Previous Versions</h1>
+    <p>Simplified and clear syntax.</p>
+   <p><b><u>Multimedia Elements</b></u><br><br>
+	With HTML5 we can import multimedia content into web page via audio,video tags <br><br>
+Previously in HMTL4 the multimedia content was integrated in web page via third party plugins such as silver light and flash.</p>
+
+<p><b><u>Accessing Geographical Location</b></u><br><br>
+	Previously in HTML4 it was complicated task to get the geographical location of the visitor visiting the page on the other hand in HTML5 it is extremely easy to get the user location <br><br>
+HTML5's geolocation API can be useful to identify the location of the user accessing the website
+</p>
+
+<p><b><u>Client Side Storage</b></u><br><br>
+	In HTML4 inorder to import the data on the client side browsers cache was used. However the cache is limited and doesn't support relational strorage mechanism <br><br>
+In HTML5 this issue has been addressed via web storage API that can be accessed via HTML5's Javascript Interface
+</p>
+
+<p><b><u>New Elements in HTML5</b></u><br><br>
+	<ul>
+	<li>section</li>
+	<li>article</li>
+	<li>aside</li>
+	<li>header</li>
+	<li>footer</li>
+	<li>nav</li>
+	<li>figure</li>
+	<li>audio</li>
+	<li>video</li>
+	<li>progress</li>
+	<li>time</li>
+	<li>canvas</li>
+	</ul>
+
+      
+                 <br><br><br><br><br><br><br><br><br><br><br>
+	<div class="pagination">
+ 	 <a href="#">&laquo;</a>
+ 	 <a href="html_introduction.html" >1</a>
+ 	 <a href="html5_html4_difference_page" class="active" >2</a>
+ 	 <a href="basic_structure.html">3</a>
+  	<a href="#">4</a>
+  	<a href="#">5</a>
+  	<a href="#">6</a>
+  	<a href="#">&raquo;</a>
+	</div>
+  </div>
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <form>
+	<label for="fname">Username</label><br>
+    <input type="text" id="uname" name="user_name" placeholder="Username">
+	<br><br>
+
+
+	 <label for="lname">Password</label><br>
+    <input type="password" id="paswd" name="password" placeholder="Password">
+	<br><br>
+  
+    <input type="submit" value="Login"><br><br>
+	
+	<a href="registration.html">Not registered yet?</a>
+  </form>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  &copy; Copyright 2019
+</div>
+
+</body>
+</html>
